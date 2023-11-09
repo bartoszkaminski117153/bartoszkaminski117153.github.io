@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html>
+<head>
+		<link rel="stylesheet" href="style.css">
+		
+</head>
+<body>
+
+		<h1>Kalkulator</h1>
+		<style>
+<style>
+	input[type="button"] {
+	width: 50px;
+	height: 50px;
+	font-size: 16px;
+	}
+
+
+</style>
+</head>
+<body>
+<input type="text" id="display" disabled>
+<br>
+<input type="button" value="1" onclick="appendToDisplay('1')">
+<input type="button" value="2" onclick="appendToDisplay('2')">
+<input type="button" value="3" onclick="appendToDisplay('3')">
+<input type="button" value="+" onclick="appendToDisplay('+')">
+<br>
+<input type="button" value="4" onclick="appendToDisplay('4')">
+<input type="button" value="5" onclick="appendToDisplay('5')">
+<input type="button" value="6" onclick="appendToDisplay('6')">
+<input type="button" value="-" onclick="appendToDisplay('-')">
+<br>
+<input type="button" value="7" onclick="appendToDisplay('7')">
+<input type="button" value="8" onclick="appendToDisplay('8')">
+<input type="button" value="9" onclick="appendToDisplay('9')">
+<input type="button" value="*" onclick="appendToDisplay('*')">
+<br>
+<input type="button" value="0" onclick="appendToDisplay('0')">
+<input type="button" value="." onclick="appendToDisplay('.')">
+<input type="button" value="C" onclick="wyczysc()">
+<input type="button" value="/" onclick="appendToDisplay('/')">
+<br>
+<input type="button" value="=" onclick="wynik()">
+<script>
+function appendToDisplay(value) {
+document.getElementById('display').value += value;
+}
+function wyczysc() {
+document.getElementById('display').value = '';
+}
+function wynik() {
+var result = eval(document.getElementById('display').value);
+document.getElementById('display').value = result;
+</script>
+</div>
+
+<button onclick="goBack()">Powrót</button>
+	<script>
+		function goBack() {
+			window.history.back();
+			}
+	
+</body>
+</html>
+</body>
+</html>
