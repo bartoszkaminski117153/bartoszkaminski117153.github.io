@@ -19,6 +19,7 @@
 </style>
 </head>
 <body>
+
 <input type="text" id="display" disabled>
 <br>
 <input type="button" value="1" onclick="appendToDisplay('1')">
@@ -52,15 +53,8 @@ document.getElementById('display').value = '';
 function wynik() {
 var result = eval(document.getElementById('display').value);
 document.getElementById('display').value = result;
+}
 </script>
-</div>
-
-<button onclick="goBack()">Powrót</button>
-	<script>
-		function goBack() {
-			window.history.back();
-			}
-	
 </body>
 </html>
 </body>
