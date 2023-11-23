@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>zadanie 4</title>
+<style>
+body {
+display: flex;
+justify-content: space-between;
+}
+.column {
+width: 48%; 
+margin: 10px;
+}
+form {
+width: 100%;
+}
+#displayedData {
+border: 1px solid #ccc;
+padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="column">
+<h2> </h2>
+<form action="/action_page.php" oninput="updateDisplayedData()">
+<label for="imie">Imie:</label><br>
+<input type="text" id="imie" name="imie" value=""><br>
+<label for="nazwisko">Nazwisko:</label><br>
+<input type="text" id="nazwisko" name="nazwisko" value=""><br>
+<label for="ulica">Ulica:</label><br>
+<input type="text" id="ulica" name="ulica" value=""><br>
+<label for="miejscowosc">Miejscowosc:</label><br>
+ <input type="text" id="miejscowosc" name="miejscowosc" value=""><br><br>
+ <label for="numerdomu">Numer domu:</label><br>
+ <input type="number" id="numerdomu" name="numerdomu" value=""><br><br>
+  <label for="numermieszkania">numer mieszkania:</label><br>
+  <input type="number" id="numermieszkania" name="numermieszkania" value=""><br><br>
+  <label for="dataurodzenia">data urodzenia:</label><br>
+  <input type="text" id="dataurodzenia" name="dataurodzenia" value=""><br><br>
+  <label for="wojewodztwo">wojewodztwo:</label><br>
+  <input type="text" id="wojewodztwo" name="wojewodztwo" value=""><br>
+  <label for="numertelefonu">numer telefonu:</label><br>
+  <input type="text" id="numertelefonu" name="" ><br>
+  <label for="adresemail">adres e-mail:</label><br>
+  <input type="text" id="adresemail" name="adresemail" value=""><br>
+</form>
+</div>
+<div class="column">
+<h2> </h2>
+<div id="displayedData">
+
+</div>
+</div>
+<script>
+function updateDisplayedData() {
+
+var imieValue = document.getElementById('imie').value;
+var nazwiskoValue = document.getElementById('nazwisko').value;
+var ulicaValue = document.getElementById('ulica').value;
+var MiejscowoscValue = document.getElementById('miejscowosc').value;
+var numerdomuValue = document.getElementById('numerdomu').value;
+var numermieszkaniaValue = document.getElementById('numermieszkania').value;
+var dataurodzeniaValue = document.getElementById('dataurodzenia').value;
+var wojewodztwoValue = document.getElementById('wojewodztwo').value;
+var numertelefonuValue = document.getElementById('numertelefonu').value;
+var adresemailValue = document.getElementById('adresemail').value;
+
+	var displayedData = document.getElementById('displayedData');
+	displayedData.innerHTML =
+"<strong>Imie:</strong> " + imieValue + "<br>" +
+"<strong>Nazwisko:</strong> " + nazwiskoValue + "<br>" +
+"<strong>Ulica:</strong> " + ulicaValue + "<br>"+
+"<strong>Miejscowosc:</strong> " + MiejscowoscValue + "<br>"+
+"<strong>Numer domu:</strong> " + numerdomuValue + "<br>"+
+"<strong>Numer mieszkania:</strong> " + numermieszkaniaValue + "<br>"+
+"<strong>Data urodzenia:</strong> " + dataurodzeniaValue + "<br>"+
+"<strong>Wojewodztwo:</strong> " + wojewodztwoValue + "<br>"+
+"<strong>Numer telefonu:</strong> " + numertelefonuValue + "<br>"+
+"<strong>Adres e-mail:</strong> " + adresemailValue + "<br>";
+
+}
+</script>
+</body>
+</html>
