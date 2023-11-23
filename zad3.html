@@ -6,15 +6,14 @@
 </head>
 <body>
     <div id="calculator">
-
+     
         <input type="text" id="display" disabled>
- 
  <div class="column">
         <button onclick="input('1')">1</button>
         <button onclick="input('2')">2</button>
         <button onclick="input('3')">3</button>
         <button onclick="input('+')">+</button><br>
-		<div class="column">
+<div class="column">
         <button onclick="input('4')">4</button>
         <button onclick="input('5')">5</button>
         <button onclick="input('6')">6</button>
@@ -33,8 +32,8 @@
         var display = document.getElementById('display');
         var lastChar = display.value.slice(-1);
  
-        if ('+-/'.includes(value) && '+-/'.includes(lastChar)) {
-
+        if ('+-*/'.includes(value) && '+-*/'.includes(lastChar)) {
+          
         } else {
             display.value += value;
         }
@@ -52,6 +51,6 @@
         document.getElementById('display').value = '';
     }
 </script>
-<button type="button" onclick="window.location.href='index.html'">Powrót do głównego pliku</button>
+
 </body>
 </html>
